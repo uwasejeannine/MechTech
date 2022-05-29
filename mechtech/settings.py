@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6=nch3317j#ap*)4au(q4f_gfwt2-osoy=cs6ey7u7ou_5z*b1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mechtech.herokuapp.com']
 
 
 # Application definition
@@ -51,6 +51,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+STATIC_HOST = os.environ.get("DJANGO_STATIC_HOST", "")
+STATIC_URL = STATIC_HOST + "/static/"
 ROOT_URLCONF = 'mechtech.urls'
 
 TEMPLATES = [
