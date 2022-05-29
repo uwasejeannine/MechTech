@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6=nch3317j#ap*)4au(q4f_gfwt2-osoy=cs6ey7u7ou_5z*b1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mechtech.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','mechtech.herokuapp.com']
 
 
 # Application definition
@@ -127,3 +127,10 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+#Sending emails
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "jeannineuwasee@gmail.com"
+EMAIL_HOST_PASSWORD = "EPASSWORD"
